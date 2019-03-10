@@ -1,17 +1,17 @@
 package ckl.kamal.assignment;
 
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-public class DemoAnnotationApp {
+public class JavaConfigDemoApp {
 
 	public static void main(String[] args) {
 
-		// read spring config file
-		ClassPathXmlApplicationContext context = 
-				new ClassPathXmlApplicationContext("applicationContext.xml");
+		// read spring config java class
+		AnnotationConfigApplicationContext context = 
+				new AnnotationConfigApplicationContext(SportConfig.class);
 		
 		// get the bean from spring container
-		Coach theCoach = context.getBean("footballCoach", Coach.class);
+		Coach theCoach = context.getBean("FootballCoach", Coach.class);
 		
 		// call a method on the bean
 		System.out.println(theCoach.getDailyWorkout());
@@ -25,11 +25,5 @@ public class DemoAnnotationApp {
 	}
 
 }
-
-
-
-
-
-
 
 

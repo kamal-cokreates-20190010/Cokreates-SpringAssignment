@@ -11,11 +11,11 @@
     
     <!-- define the dependency -->    
     <bean id="myFortuneService"
-    		class="ckl.kamal.assignment3.RandomFortuneService">
+    		class="ckl.kamal.assignment.RandomFortuneService">
     	</bean>
     
  	<bean id="myCricketCoach"
- 		class="ckl.kamal.assignment3.CricketCoach"
+ 		class="ckl.kamal.assignment.CricketCoach"
  		scope="prototype">	 
  		
  		<!-- set up constructor injection -->
