@@ -9,11 +9,20 @@
 	
     <!-- Define your beans here -->
     
+    <!-- define the dependency -->    
+    <bean id="myFortuneService"
+    		class="ckl.kamal.assignment.RandomFortuneService">
+    	</bean>
+    
  	<bean id="myCricketCoach"
- 		class="ckl.kamal.assignment.CricketCoach">	 		
+ 		class="ckl.kamal.assignment.CricketCoach">	 
+ 		
+ 		<!-- set up constructor injection -->
+ 		<constructor-arg ref="myFortuneService" />
  	</bean>
     
 </beans>
+
 
 
 
