@@ -15,7 +15,10 @@ public class DemoAnnotationApp {
 		
 		// call a method on the bean
 		System.out.println(theCoach.getDailyWorkout());
-				
+
+		// call a method on the bean
+		System.out.println(theCoach.getDailyFortune());
+
 		// close the context
 		context.close();
 		
