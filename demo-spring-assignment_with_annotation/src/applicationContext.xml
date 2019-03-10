@@ -7,20 +7,10 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 	
-    <!-- Define your beans here -->
-    
-    <!-- define the dependency -->    
-    <bean id="myFortuneService"
-    		class="ckl.kamal.assignment3.RandomFortuneService">
-    	</bean>
-    
- 	<bean id="myCricketCoach"
- 		class="ckl.kamal.assignment3.CricketCoach"
- 		scope="prototype">	 
- 		
- 		<!-- set up constructor injection -->
- 		<constructor-arg ref="myFortuneService" />
- 	</bean>
+	<!-- add entry to enable component scanning -->
+
+	<context:component-scan base-package="ckl.kamal.assignment" />
+	
     
 </beans>
 
